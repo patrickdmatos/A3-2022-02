@@ -1,4 +1,4 @@
-# A3-mecflu
+# A3-resmat
 
 
-trablho da A3 de fluidos mecânicos para a faculdade são judas realizado em grupo.
+trablho da A3 de resistência mecanica dos materiais para a faculdade são judas realizado em grupo.
