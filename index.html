@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="" href="./assets/js/index.js">
+    <script src="./assets/js/index.js"></script>
 </head>
+
 <body onload="agradecimento()">
     <div id="tela"></div>
-        <header>
-            <h1>CÁLCULOS A SEREM REALIZADOS</h1>
-        </header>
-        <section>
-            <img id="img1" src='' />
-            <div>
-                <h2>Valor 01<input type="number" name="valor01" id="valor01" placeholder="Digite o valor 01"></h2>    
-            </div>
+    <h1>CÁLCULOS A SEREM REALIZADOS</h1>
+    <br>
+    <div id="pagecontainer">
+        <!-- <img id="img1" src='' /> -->
+        <div>
+            <b>Valor 01<input type="number" name="valor01" id="valor01" placeholder="Digite o valor 01"></b>
+        </div>
 
-            <div>
-                <h2>NIVEL:
-                    <select id="selecione o nivel">
-                        <option value="0.10">VALOR01</option>
-                        <option value="0.05">VALOR02</option>
-                    </select>
-                </h2>
-                <h2>
-                    ALTURA DO POSTE <input type="number" name="altposte" id="altposte" placeholder="altura do poste">
-                </h2>
-                    <br>
-                    <br>
-                        <input type="button" value="Calcular" id="calcular" onclick="calcular()">
-            </div>
-            <div>
-                <h2>RES01<div><p id="RES01">00,00</p></div></h2>
-            </div>
+        <div id="nivel">
+            <b>NIVEL:
+                <select id="select-nivel">
+                    <option value="0.10">VALOR 1</option>
+                    <option value="0.05">VALOR 2</option>
+                </select>
+            </b>
+        </div>
 
-            <div>
-                <h2>RES02<div><p id="RES02">00,00</p></div></h2>
-                
-            </div>
+        <div>
+            <b>
+                ALTURA DO POSTE: <input type="number" name="altposte" id="altposte" placeholder="altura do poste">
+            </b>
+        </div>
+        <div>
+            <input type="button" value="Calcular" id="calcular" onclick="calcular()">
+        </div>
+        <div>
+            <b>RES 1<div>
+                    <p id="RES01">00,00</p>
+                </div></b>
+        </div>
 
-            <div>
-                <h2>RES03<div><p id="RES03">00,00</p></div></h2>
-                
-            </div>
+        <div>
+            <b>RES 2<div>
+                    <p id="RES02">00,00</p>
+                </div></b>
 
-            <div>
-                <h3 id="msg"></h3>
-            </div>
-            
-        </section>
+        </div>
+
+        <div>
+            <b>RES 3<div>
+                    <p id="RES03">00,00</p>
+                </div></b>
+
+        </div>
+
+        <div>
+            <h3 id="msg"></h3>
+        </div>
+
+    </div>
     </div>
     <footer>
         &copy;ANCORADOR USJT A3 2022/2
     </footer>
-    <script src="script.js"></script>
 </body>
+
 </html>
