@@ -20,6 +20,31 @@ div{
     text-align: center;
     justify-content: center;
 }
+#calcular{
+    height: 2rem;
+    width: 6rem;
+    background-color: rgb(0, 10, 22);
+    color: rgb(221, 236, 255);
+    border: 2px solid rgb(221, 236, 255);
+    border-radius: 10px 10px 10px 10px;
+    transition: 0.4s;
+}
+#calcular:hover{
+    background-color: rgb(221, 236, 255);
+    color: rgb(0, 10, 22);
+    border: 2px solid rgb(0, 10, 22);
+    font-weight: bolder;
+    height: 2.2rem;
+    width: 6.5rem;
+}
+.input_variavel{
+    width: 10rem;
+    height: 2rem;
+    background-color: rgb(0, 10, 22);
+    color: rgb(221, 236, 255);
+    border: 2px solid rgb(221, 236, 255);
+    border-radius: 10px 10px 10px 10px;
+}
 #pagecontainer{
     align-items: center;
     justify-content: center;
@@ -30,4 +55,5 @@ div{
     border-radius: 10px 10px 10px 10px;
     margin-left: 25%;
     width: 50%;
+    height: 60%;
 }
