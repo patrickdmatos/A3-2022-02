@@ -18,8 +18,22 @@ div{
     width: 100%;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content:flex-end;
 }
+
+#titulo {
+    justify-content:center;
+    background-color: black;
+    color:aliceblue;
+    width: 35rem;
+    height: 4rem;
+    margin: auto;
+    padding: 0px;
+    font-size: 30px;
+    border-radius: 10px;
+
+}
+
 #calcular{
     height: 2rem;
     width: 6rem;
@@ -52,7 +66,7 @@ div{
     padding: 1rem;
     display: block;
     border: solid 2px rgb(0, 10, 22);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     margin-left: 25%;
     width: 50%;
     height: 60%;

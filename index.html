@@ -13,7 +13,9 @@
 
 <body>
     <div id="tela"></div>
-    <h1>INSERÇÃO DE POSTE</h1>
+    <div id="titulo">
+        <h1>ANCORADOR</h1>
+    </div>
     <h2>Cálculos e observações a serem
         <br>realizados para instalação do poste</h2></br>
     <br>
@@ -63,11 +65,19 @@
                 </select>
             </b>
         </div>
-        <div>
+        <div id="nivel">
+            <b>ALTURA DO POSTE >
+                <select class="input_valor" id="select-nivel">
+                    <option value="0.00">0.00</option>
+                    <option value="0.05">0.05</option>
+                </select>
+            </b>
+        </div>
+        <!-- <div>
             <b>
                 ALTURA DO POSTE > <input class="input_valor" type="number" name="altposte" id="altposte" placeholder="Altura do poste">
             </b>
-        </div>
+        </div> -->
         <div>
             <input type="button" value="Calcular" id="calcular" onclick="calcular()">
         </div>
