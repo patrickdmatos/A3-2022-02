@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="" href="./assets/js/index.js">
     <script src="./assets/js/index.js"></script>
 </head>
 
@@ -16,14 +15,25 @@
     <h1>CÁLCULOS A SEREM REALIZADOS</h1>
     <br>
     <div id="pagecontainer">
-        <!-- <img id="img1" src='' /> -->
+        <img id="img1" src='' />
         <div>
-            <b>Valor 01: <input class="input_variavel" type="number" name="valor01" id="valor01" placeholder="Digite o valor 01"></b>
+            <b>Altura do poste: 
+                <select name="" id="select-altura-poste">
+                    <option value=""></option>
+                    <option value="7,5">7,5</option>
+                    <option value="9,3">9,3</option>
+                    <option value="10,2">10,2</option>
+                    <option value="11,1">11,1</option>
+                    <option value="12,9">12,9</option>
+                    <option value="15,6">15,6</option>
+                </select>
+            </b>
         </div>
 
         <div id="nivel">
             <b>NIVEL:
-                <select class="input_variavel" id="select-nivel">
+                <select class="input_variavel" id="select-nivel" >
+                    <option value=" " class="placeholder">Selecione um nivel</option>
                     <option value="0.10">0.10</option>
                     <option value="0.05">0.05</option>
                 </select>
