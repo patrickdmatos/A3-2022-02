@@ -13,22 +13,19 @@
 
 <body>
 
-
     <header>
         <div id="titulo">
             <h1>ANCORADOR</h1>
         </div>
     </header>
 
-
     <section>
 
         <h2>Optimizador de cálculos para
         <br>instalação de poste</h2>
 
-
         <div id="pagecontainer">
-            <div id="vao">
+            <div id="campo-seletor">
                 <b>VÃO
                     <br>DISTÂNCIA ENTRE POSTES</br>
                     <select class="input_valor" id="select-vao">
@@ -88,9 +85,8 @@
 
                 <!--Os cabos serão mostrados confiorme dispoíveis com relação a vão e altura-->
 
-
                 <div id="vao">
-                    <b>TRAÇÃO PRIMARIA
+                    <b>LINHA PRIMARIA
                         <br>FS / CABOS DISPONÍVEIS</br>
                         <select class="input_valor" id="select-vao">
                             <option selected disabled>Cabeamento</option>
@@ -104,26 +100,40 @@
                     </b>
                 </div>
 
-
-                <!--<div id="cabos-dispo">
-                    <b>CABEAMENTOS DISPONÍVEIS
-                        <select class="input_valor" id="select-cabos-dispo">
-                            <option value="0.10">0.00</option>
-                            <option value="0.05">0.05</option>
-                        </select>
-                    </b>
-                </div>-->
-
-
-                <div id="vb-regiao">
-                    <b>VB DA REGIÃO<br>
-                        <select class="input_valor" id="select-cabos-dispo">
-                            <option value="0.10">0.00</option>
-                            <option value="0.05">0.05</option>
+                <div id="vao">
+                    <b>LINHA SECUNDÁRIA
+                        <br>FS / CABOS DISPONÍVEIS</br>
+                        <select class="input_valor" id="select-vao">
+                            <option selected disabled>Cabeamento</option>
+                            <option value="0.16">16mm²</option>
+                            <option value="0.25">25mm²</option>
+                            <option value="0.35">35mm²/option>
+                            <option value="0.50">50mm²</option>
+                            <option value="0.70">70mm²</option>
+                            <option value="1.20">120mm² 15kV</option>
                         </select>
                     </b>
                 </div>
 
+                <div id="vao">
+                    <b>CABEAMENTO II
+                        <br><input type="checkbox" value="90"> ABRÂNGERÁ CABOS TERCERIZADOS?</br>
+                    </b>
+                </div>
+
+                <div id="vb-regiao">
+                    <b>VB DA REGIÃO<br>
+                        <select class="input_valor" id="select-cabos-dispo">
+                            <option selected disabled>Acre</option>
+                            <option selected disabled>Bahia</option>
+                            <option selected disabled>Minas Gerais</option>
+                            <option selected disabled>Rio de Janeiro</option>
+                            <option selected disabled>Santa Catarina</option>
+                            <option selected disabled>Região...</option>
+                            <option value="0.10">São Paulo</option> <!--ALTERAR O VALOR DO VB-->
+                        </select>
+                    </b>
+                </div>
 
                 <div id="variavel-local">
                     <b>VB DO LOCAL >
@@ -134,7 +144,6 @@
                     </b>
                 </div>
 
-
                 <div id="nivel">
                     <b>NIVEL >
                         <select class="input_valor" id="select-nivel">
@@ -143,7 +152,6 @@
                         </select>
                     </b>
                 </div>
-
 
                 <div id="nivel">
                     <b>ALTURA DO POSTE >
