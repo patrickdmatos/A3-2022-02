@@ -23,16 +23,45 @@
 
     <section>
 
-        <h2>Cálculos e observações a serem
-        <br>realizados para instalação do poste</h2>
+        <h2>Optimizador de cálculos para
+        <br>instalação de poste</h2>
 
 
         <div id="pagecontainer">
-                <div id="vao">
-                    <b>VÃO ENTRE POSTES
-                        <br>FP / CABOS DISPONÍVEIS</br>
-                        <select class="input_valor" id="select-vao">
-                            <option selected disabled>Cabeamento</option>
+            <div id="vao">
+                <b>VÃO
+                    <br>DISTÂNCIA ENTRE POSTES</br>
+                    <select class="input_valor" id="select-vao">
+                        <option selected disabled>Distância...</option>
+                        <option value="35">35 metros</option>
+                        <option value="40">40 metros</option>
+                        <option value="80">80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+                        <option value="120">120 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+                    </select>
+                </b>
+            </div>
+
+            <!--Distância ditará os cabeamentos que poderão ser utilizados-->
+            
+            <div id="altura">
+                <b>ALTURA
+                    <br>ALTURA DO POSTE</br>
+                    <select class="input_valor" id="select-altura">
+                        <option selected disabled>Altura...</option>
+                        <option value="10">10 metros</option>
+                        <option value="12">12 metros</option>
+                    </select>
+                </b>
+            </div>
+
+            <!--Altura ditará espessura e restistencia-->
+
+        <div id="pagecontainer">
+                <div id="cabeamento">
+                    <b>CABEAMENTO
+                        <br>CABOS DISPONÍVEIS</br>
+                        <select class="input_valor" id="select-cable">
+                            <option selected disabled>Cabeamento...</option>
                             <option value="0.35">35mm²</option>
                             <option value="0.70">70mm²</option>
                             <option value="">70mm² 34,5 kV</option>
@@ -57,9 +86,11 @@
                     </b>
                 </div>
 
+                <!--Os cabos serão mostrados confiorme dispoíveis com relação a vão e altura-->
+
 
                 <div id="vao">
-                    <b>VÃO ENTRE POSTES
+                    <b>TRAÇÃO PRIMARIA
                         <br>FS / CABOS DISPONÍVEIS</br>
                         <select class="input_valor" id="select-vao">
                             <option selected disabled>Cabeamento</option>
