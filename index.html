@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
-    <!--<link rel="stylesheet" href="./assets/css/index.css">-->
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="" href="./assets/js/index.js">
     <script src="./assets/js/index.js"></script>
 </head>
 
 <body>
-
     <header>
         <div id="titulo">
             <h1>ANCORADOR</h1>
@@ -26,10 +25,10 @@
 
         <div id="pagecontainer">
             <div id="campo-seletor">
-                <b>VÃO
+                <b>
                     <br>DISTÂNCIA ENTRE POSTES</br>
                     <select class="input_valor" id="select-vao">
-                        <option selected disabled>Distância...</option>
+                        <option selected disabled>Distância</option>
                         <option value="35">35 metros</option>
                         <option value="40">40 metros</option>
                         <option value="80">80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
@@ -40,11 +39,11 @@
 
             <!--Distância ditará os cabeamentos que poderão ser utilizados-->
             
-            <div id="altura">
-                <b>ALTURA
+            <div id="campo-seletor">
+                <b>
                     <br>ALTURA DO POSTE</br>
                     <select class="input_valor" id="select-altura">
-                        <option selected disabled>Altura...</option>
+                        <option selected disabled>Altura</option>
                         <option value="10">10 metros</option>
                         <option value="12">12 metros</option>
                     </select>
@@ -52,13 +51,11 @@
             </div>
 
             <!--Altura ditará espessura e restistencia-->
-
-        <div id="pagecontainer">
-                <div id="cabeamento">
-                    <b>CABEAMENTO
+                <div id="campo-seletor">
+                    <b>
                         <br>CABOS DISPONÍVEIS</br>
                         <select class="input_valor" id="select-cable">
-                            <option selected disabled>Cabeamento...</option>
+                            <option selected disabled>Cabeamento</option>
                             <option value="0.35">35mm²</option>
                             <option value="0.70">70mm²</option>
                             <option value="">70mm² 34,5 kV</option>
@@ -85,9 +82,9 @@
 
                 <!--Os cabos serão mostrados confiorme dispoíveis com relação a vão e altura-->
 
-                <div id="vao">
-                    <b>LINHA PRIMARIA
-                        <br>FS / CABOS DISPONÍVEIS</br>
+                <div id="campo-seletor">
+                    <b>LINHA PRIMÁRIA
+                        <br>FP / CABOS DISPONÍVEIS</br>
                         <select class="input_valor" id="select-vao">
                             <option selected disabled>Cabeamento</option>
                             <option value="0.16">16mm²</option>
@@ -135,71 +132,38 @@
                     </b>
                 </div>
 
-                <div id="variavel-local">
-                    <b>VB DO LOCAL >
+                <div id="var-local">
+                    <b>VB DO LOCAL<br>
                         <select class="input_valor" id="select-cabos-dispo">
-                            <option value="0.10">0.00</option>
-                            <option value="0.05">0.05</option>
+                            <option selected disabled>Ribeirão Preto</option>
+                            <option selected disabled>Santana de Parnaiba</option>
+                            <option selected disabled>Local...</option>
+                            <option value="0.10">São Paulo</option>
                         </select>
                     </b>
                 </div>
 
-                <div id="nivel">
-                    <b>NIVEL >
-                        <select class="input_valor" id="select-nivel">
-                            <option value="0.00">0.00</option>
-                            <option value="0.05">0.05</option>
-                        </select>
-                    </b>
-                </div>
-
-                <div id="nivel">
-                    <b>ALTURA DO POSTE >
-                        <select class="input_valor" id="select-nivel">
-                            <option value="0.00">0.00</option>
-                            <option value="0.05">0.05</option>
-                        </select>
-                    </b>
-                </div>
-                
-                
                 <div>
-                    <input type="button" value="Calcular" id="calcular" onclick="calcular()">
-                </div>
-
-
-                <div>
-                    <b>FORÇA LINHA PRIMÁRIA<div>
-                            <p id="RES01">00,00</p>
+                    <b>FORÇA DE TRAÇÃO NA LINHA PRIMÁRIA<div>
+                            <p id="RES01"></p>
                         </div></b>
                 </div>
 
-
                 <div>
-                    <b>FORÇA LINHA SECUNDÁRIA<div>
-                            <p id="RES02">00,00</p>
+                    <b>FORÇA DE TRAÇÃO NA LINHA SECUNDÁRIA<div>
+                            <p id="RES02"></p>
                         </div></b>
 
                 </div>
 
-
                 <div>
-                    <b>RES 3<div>
-                            <p id="RES03">00,00</p>
+                    <b>FORÇA DO VENTO NA SUPERFÍCIE DO POSTE<div>
+                            <p id="RES03"></p>
                         </div></b>
-
                 </div>
-
-
-                <div>
-                    <h3 id="msg"></h3>
-                </div>
-
 
             </div>
         </div>
-
-
     </section>
     <footer>
         &copy;ANCORADOR USJT A3 2022/2
