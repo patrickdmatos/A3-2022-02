@@ -6,30 +6,43 @@ body{
     margin: auto;
     width: 600px;
     border: 0px;
-    background-color: rgb(221, 236, 255);
-}
-
-div{
-    display: flex;
-    margin: 0.3rem;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content:flex-end;
+    background-color: rgb(255, 255, 255);
 }
 
 #titulo {
+    text-align: center;
     justify-content:center;
-    background-color: black;
+    background-color: #343d8b;
+    box-shadow: 10px 10px 3px #93c406;
+    border-radius: 10px;
     color:aliceblue;
     width: auto;
-    height: 5rem;
+    height: 80px;
     margin: auto;
     padding: 0px;
     font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #343d8b;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#pagecontainer {
+    color: #fff;
+    background-color: #343d8b;
+    box-shadow: 10px 10px 3px #93c406;
     border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
 
 }
+
+/*
+
 
 #calcular{
     height: 2rem;
@@ -59,15 +72,4 @@ div{
     border-radius: 10px 10px 10px 10px;
 }
 
-#pagecontainer{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    display: grid;
-    border: solid 2px rgb(0, 10, 22);
-    border-radius: 20px;
-    margin-left: auto;
-    width: 230px;
-    height: 730px;
-}
+*/
