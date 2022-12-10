@@ -56,12 +56,13 @@ h2 {
 }
 
 footer {
-    text-align: center;    
+    text-align: center;
+    padding: 10px;
 }
 
 footer a {
-    padding: 10px;
     text-decoration: none;
     font-weight: 800;
     color: #0494cc;
+    letter-spacing: 5px;
 }
