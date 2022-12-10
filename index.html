@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="" href="./assets/js/index.js">
+    <link rel="stylesheet" href="index.css">
+    <link rel="" href="index.js">
     <!-- <script src="./assets/js/index.js"></script> -->
 </head>
 
 <body>
+
     <header>
         <div id="titulo">
             <h1>ANCORADOR</h1>
@@ -96,7 +97,7 @@
                     </b>
                 </div>
 
-                <div id="vao">
+                <div id="campo-seletor">
                     <b>LINHA SECUNDÁRIA
                         <br>FS / CABOS DISPONÍVEIS</br>
                         <select class="input_valor" id="select-vao">
@@ -111,32 +112,32 @@
                     </b>
                 </div>
 
-                <div id="vao">
+                <div id="campo-seletor">
                     <b>CABEAMENTO II
                         <br><input type="checkbox" value="90"> ABRÂNGERÁ CABOS TERCERIZADOS?</br>
                     </b>
                 </div>
 
-                <div id="vb-regiao">
+                <div id="campo-seletor">
                     <b>VB DA REGIÃO<br>
                         <select class="input_valor" id="select-cabos-dispo">
-                            <option selected disabled>Acre</option>
-                            <option selected disabled>Bahia</option>
-                            <option selected disabled>Minas Gerais</option>
-                            <option selected disabled>Rio de Janeiro</option>
-                            <option selected disabled>Santa Catarina</option>
-                            <option selected disabled>Região...</option>
+                            <option selected>Região</option>
+                            <option disabled>Acre</option>
+                            <option disabled>Bahia</option>
+                            <option disabled>Minas Gerais</option>
+                            <option disabled>Rio de Janeiro</option>
+                            <option disabled>Santa Catarina</option>                            
                             <option value="0.10">São Paulo</option> <!--ALTERAR O VALOR DO VB-->
                         </select>
                     </b>
                 </div>
 
-                <div id="var-local">
+                <div id="campo-seletor">
                     <b>VB DO LOCAL<br>
                         <select class="input_valor" id="select-cabos-dispo">
                             <option selected disabled>Ribeirão Preto</option>
                             <option selected disabled>Santana de Parnaiba</option>
-                            <option selected disabled>Local...</option>
+                            <option selected disabled>Local</option>
                             <option value="0.10">São Paulo</option>
                         </select>
                     </b>
@@ -164,10 +165,11 @@
             </div>
         </div>
     </section>
+    <div id="imgposte"></div>
     <footer>
-        &copy;ANCORADOR USJT A3 2022/2
+        <a href="alunos.html">&copy;ANCORADOR USJT A3 2022/2</a>
     </footer>
-
+    
     <script src="./assets/js/index.js"></script>
 </body>
 
