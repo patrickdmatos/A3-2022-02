@@ -6,7 +6,11 @@ body{
     margin: auto;
     width: 600px;
     border: 0px;
-    background-color: rgb(255, 255, 255);
+    background: rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 45%, rgba(0,0,0,0.0022321428571429047) 100%);
+    background-attachment: fixed;
 }
 
 #titulo {
@@ -25,7 +29,7 @@ body{
 
 h2 {
     text-align: center;
-    color: #343d8b;
+    color: #0494cc;
     font-size: 11px;
     text-transform: uppercase;
 }
@@ -46,6 +50,7 @@ h2 {
 
 .input_valor {
     font-family:'Roboto mono', Times, serif;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 100;
     text-align: center;
@@ -62,7 +67,13 @@ footer {
 
 footer a {
     text-decoration: none;
+    font-size: 20px;
     font-weight: 800;
-    color: #0494cc;
+    color: #34220b;
     letter-spacing: 5px;
+}
+
+#integrantes {
+    color:#93c406
+    
 }
