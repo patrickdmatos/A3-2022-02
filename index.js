@@ -5,9 +5,6 @@ function detPopup()
 function altpPopup()
 {alert("Defina qual altura do poste a ser instalado.");}
 
-function cabdPopup()
-{alert("Informe qual tipo de fiação deseja utilizar.");}
-
 function linpPopup()
 {alert("Esta é a fiação disponível para instalação da linha primária, a qual ficará ostentada no topo do poste.");}
 
@@ -25,10 +22,13 @@ function vblPopup()
 
 
 //funcao do select
-var select_dispost = document.getElementById("dispost");
 
 function disable_select() {
-    if (select_dispost == 80) {
-        alert('vc escolheu 80');
+    var dispost = document.getElementById('dispost').value;
+    var lins = document.getElementById('lins').value;
+
+    if (dispost.value == "2") {
+        document.getElementById('lins').setAttribute('disabled','');
+        return;
     }
 }
