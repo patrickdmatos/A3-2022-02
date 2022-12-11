@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="" href="index.js">
 </head>
 
 <body>
+    <div id="popup">
+        <p>olá mundo</p>
+    </div>
 
     <header>
         <div id="titulo">
@@ -25,7 +27,12 @@
         <div id="pagecontainer">
             <div id="campo-seletor">
                 <b>
-                    <br>DISTÂNCIA ENTRE POSTES</br>
+                    <br>DISTÂNCIA ENTRE POSTES
+
+                    <a href="javascript:detPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                
+                    </br>
+                    
                     <select class="input_valor" id="select-vao">
                         <option selected>Distância</option>
                         <option value="35">35 metros</option>
@@ -40,9 +47,14 @@
             
             <div id="campo-seletor">
                 <b>
-                    <br>ALTURA DO POSTE</br>
+                    <br>ALTURA DO POSTE
+                    
+                    <a href="javascript:altpPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                    
+                    </br>
+
                     <select class="input_valor" id="select-altura">
-                        <option selected disabled>Altura</option>
+                        <option selected>Altura</option>
                         <option value="10">10 metros</option>
                         <option value="12">12 metros</option>
                     </select>
@@ -52,7 +64,12 @@
             <!--Altura ditará espessura e restistencia-->
                 <div id="campo-seletor">
                     <b>
-                        <br>CABOS DISPONÍVEIS</br>
+                        <br>CABOS DISPONÍVEIS
+
+                        <a href="javascript:cabdPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+
+                        </br>
+
                         <select class="input_valor" id="select-cable">
                             <option selected>Cabeamento</option>
                             <option value="0.35">35mm²</option>
@@ -83,7 +100,12 @@
 
                 <div id="campo-seletor">
                     <b>LINHA PRIMÁRIA
-                        <br>FP / CABOS DISPONÍVEIS</br>
+                        <br>FP / CABOS DISPONÍVEIS
+
+                        <a href="javascript:linpPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+
+                        </br>
+
                         <select class="input_valor" id="select-vao">
                             <option selected>Cabeamento</option>
                             <option value="0.16">16mm²</option>
@@ -98,12 +120,17 @@
 
                 <div id="campo-seletor">
                     <b>LINHA SECUNDÁRIA
-                        <br>FS / CABOS DISPONÍVEIS</br>
+                        <br>FS / CABOS DISPONÍVEIS
+                    
+                        <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                    
+                        </br>
+
                         <select class="input_valor" id="select-vao">
                             <option selected disabled>Cabeamento</option>
                             <option value="0.16">16mm²</option>
                             <option value="0.25">25mm²</option>
-                            <option value="0.35">35mm²/<option>
+                            <option value="0.35">35mm²</option>
                             <option value="0.50">50mm²</option>
                             <option value="0.70">70mm²</option>
                             <option value="1.20">120mm² 15kV</option>
@@ -113,12 +140,21 @@
 
                 <div id="campo-seletor">
                     <b>CABEAMENTO II
-                        <br><input id="" type="checkbox" value="90"> ABRÂNGERÁ CABOS TERCERIZADOS?</br>
+                        <br><input id="" type="checkbox" value="90"> ABRÂNGERÁ CABOS TERCERIZADOS?
+                    
+                        <a href="javascript:lintPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                    
+                        </br>
                     </b>
                 </div>
 
                 <div id="campo-seletor">
-                    <b>VB DA REGIÃO<br>
+                    <b>VB DA REGIÃO
+                        
+                        <a href="javascript:vbrPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                        
+                        <br>
+
                         <select class="input_valor" id="select-cabos-dispo">
                             <option selected>Região</option>
                             <option disabled>Acre</option>
@@ -132,11 +168,15 @@
                 </div>
 
                 <div id="campo-seletor">
-                    <b>VB DO LOCAL<br>
+                    <b>VB DO LOCAL
+                        
+                        <a href="javascript:vblPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+
+                        <br>
                         <select class="input_valor" id="select-cabos-dispo">
-                            <option selected disabled>Ribeirão Preto</option>
-                            <option selected disabled>Santana de Parnaiba</option>
-                            <option selected disabled>Local</option>
+                            <option selected>Local</option>
+                            <option disabled>Ribeirão Preto</option>
+                            <option disabled>Santana de Parnaiba</option>
                             <option value="0.10">São Paulo</option>
                         </select>
                     </b>
@@ -166,10 +206,10 @@
     </section>
     <div id="imgposte"></div>
     <footer>
-        <a href="alunos.html">&copy;ANCORADOR USJT A3 2022/2</a>
+        <a href="integrantes.html">&copy;ANCORADOR USJT A3 2022/2</a>
     </footer>
     
-    <script src="./assets/js/index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
