@@ -1,3 +1,4 @@
+//Msg de info
 function detPopup()
 {alert("Defina qual a distância terão os postes entre sí.");}
 
@@ -22,3 +23,12 @@ function vbrPopup()
 function vblPopup()
 {alert("Informe o local para ter ciência quanto a média variada de vento ocorrida.");}
 
+
+//funcao do select
+var select_dispost = document.getElementById("dispost");
+
+function disable_select() {
+    if (select_dispost == 80) {
+        alert('vc escolheu 80');
+    }
+}
