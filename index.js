@@ -21,14 +21,13 @@ function vblPopup()
 {alert("Informe o local para ter ciência quanto a média variada de vento ocorrida.");}
 
 
-//funcao do select
 
-function disable_select() {
-    var dispost = document.getElementById('dispost').value;
-    var lins = document.getElementById('lins').value;
 
-    if (dispost.value == "2") {
-        document.getElementById('lins').setAttribute('disabled','');
-        return;
-    }
+function disabled_select() {
+    var select = document.getElementById('dispost').value;
+
+    if (select == "80") {
+        window.alert("é 80 mesmo");
+    } else {window.alert("esolhe")}
+
 }
