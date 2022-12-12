@@ -7,72 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANCORADOR</title>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./assets/js/index.js"></script>
+    <script src="/assets/js/index.js"></script>
 </head>
 
-<body onload="agradecimento()">
-    <div id="tela"></div>
-    <h1>CÁLCULOS A SEREM REALIZADOS</h1>
-    <br>
+<body>
+    <h1>ANCORADOR</h1>
+
+    <h2>
+        Cálculos e observações a serem
+        realizados para instalação do poste
+    </h2>
+
     <div id="pagecontainer">
-        <img id="img1" src='' />
-        <div>
-            <b>Altura do poste: 
-                <select name="" id="select-altura-poste">
-                    <option value=""></option>
-                    <option value="7,5">7,5</option>
-                    <option value="9,3">9,3</option>
-                    <option value="10,2">10,2</option>
-                    <option value="11,1">11,1</option>
-                    <option value="12,9">12,9</option>
-                    <option value="15,6">15,6</option>
-                </select>
-            </b>
-        </div>
+        <b>
+            VÃO ENTRE POSTES EM METROS
+        </b>
+        <select class="input_valor" id="select-vao">
+            <option selected disabled>Vão entre os postes</option>
+            <option value="35">35m</option>
+            <option value="40">40m</option>
+            <option value="80">80m</option>
+            <option value="105">105m</option>
+        </select><br>
+        <b>
+            VÃO ENTRE POSTES / CABOS DISPONÍVEIS
+        </b>
+        <select class="input_valor" id="select-cabo">
 
-        <div id="nivel">
-            <b>NIVEL:
-                <select class="input_variavel" id="select-nivel" >
-                    <option value=" " class="placeholder">Selecione um nivel</option>
-                    <option value="0.10">0.10</option>
-                    <option value="0.05">0.05</option>
-                </select>
-            </b>
-        </div>
+        </select><br>
+        <!--<div id="cabos-dispo">
+                    <b>CABEAMENTOS DISPONÍVEIS
+                        <select class="input_valor" id="select-cabos-dispo">
+                            <option value="0.10">0.00</option>
+                            <option value="0.05">0.05</option>
+                        </select><br>
+                    </b>
+                </div>-->
 
-        <div>
-            <b>
-                ALTURA DO POSTE: <input class="input_variavel" type="number" name="altposte" id="altposte" placeholder="Altura do poste">
-            </b>
-        </div>
-        <div>
-            <input type="button" value="Calcular" id="calcular" onclick="calcular()">
-        </div>
-        <div>
-            <b>RES 1<div>
-                    <p id="RES01">00,00</p>
-                </div></b>
-        </div>
+        <b>VB DA REGIÃO</b>
+        <select class="input_valor" id="select-cabos-dispo">
+            <option value="0.10">0.00</option>
+            <option value="0.05">0.05</option>
+        </select><br>
 
-        <div>
-            <b>RES 2<div>
-                    <p id="RES02">00,00</p>
-                </div></b>
+        <b>VB DO LOCAL </b>
+        <select class="input_valor" id="select-cabos-dispo">
+            <option value="0.10">0.00</option>
+            <option value="0.05">0.05</option>
+        </select><br>
 
+        <b>NIVEL </b>
+        <select class="input_valor" id="select-nivel">
+            <option value="0.00">0.00</option>
+            <option value="0.05">0.05</option>
+        </select><br>
+
+        <b>ALTURA DO POSTE </b>
+        <select class="input_valor" id="select-nivel">
+            <option value="0.00">0.00</option>
+            <option value="0.05">0.05</option>
+        </select><br>
+
+        <button id="calcular" onclick="calcular()"> calcular</button>
+
+        <div class="resultados">
+            <p id="FORÇA_L_PRIMARIA">FORÇA LINHA PRIMÁRIA: <span
+                    style="border-bottom: 2px solid rgb(0, 10, 28);">00,00</span></p>
+
+            <p id="FORÇA_L_SECUNDARIA">FORÇA LINHA SECUNDÁRIA: <span
+                    style="border-bottom: 2px solid rgb(0, 10, 28);">00,00</span></p>
+
+            <p id="RES03"> RES 3: <span style="border-bottom: 2px solid rgb(0, 10, 28);">00,00</span></p>
         </div>
-
-        <div>
-            <b>RES 3<div>
-                    <p id="RES03">00,00</p>
-                </div></b>
-
-        </div>
-
-        <div>
-            <h3 id="msg"></h3>
-        </div>
-
-    </div>
     </div>
     <footer>
         &copy;ANCORADOR USJT A3 2022/2
