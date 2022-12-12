@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    padding: 30px;
+    margin: auto;
+    width: 600px;
+    border: 0px;
+    background: rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 45%, rgba(0,0,0,0.0022321428571429047) 100%);
+    background-attachment: fixed;
+}
+
+#titulo {
+    text-align: center;
+    justify-content:center;
+    background-color: #343d8b;
+    box-shadow: 10px 10px 3px #93c406;
+    border-radius: 10px;
+    color:aliceblue;
+    width: auto;
+    height: 80px;
+    margin: auto;
+    padding: 0px;
+    font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #0494cc;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#pagecontainer {
+    color: #fff;
+    background-color: #343d8b;
+    box-shadow: 10px 10px 3px #93c406;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+
+#campo-seletor {
+    padding: 10px;
+}
+
+.input_valor {
+    font-family:'Roboto mono', Times, serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #93c406;
+    padding: 5px;
+    width: 250px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #34220b;
+    letter-spacing: 5px;
+}
+
+/* referente a página INTEGRANTES.html */
+
+#integrantes {
+    color:#93c406
+
+}
