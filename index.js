@@ -21,13 +21,13 @@ function vblPopup()
 {alert("Informe o local para ter ciência quanto a média variada de vento ocorrida.");}
 
 
-/* Desativar o select caso selecioe o 80 ou 120*/
 
-function disabled_select() {
-    var select = document.getElementById('dispost').value;
+/* Desativar o select caso selecioe o 80 ou 120 */
 
-    if (select == "80") {
+var select = document.getElementById('dispost').value;
+
+function disabled() {
+    if (select == 80){
         window.alert("é 80 mesmo");
-    } else {window.alert("esolhe")}
-
+    }
 }
