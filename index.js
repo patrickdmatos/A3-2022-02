@@ -27,7 +27,12 @@ function vblPopup()
 var select = document.getElementById('dispost').value;
 
 function disabled() {
-    if (select == 80){
+
+    var select = document.getElementById('dispost').value;
+
+
+    if (select == "80 metros"){
         window.alert("é 80 mesmo");
+        return;
     }
 }
