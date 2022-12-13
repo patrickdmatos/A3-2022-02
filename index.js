@@ -19,8 +19,8 @@ let selectCabo = document.getElementById('dispost');
 let selectAlturaPoste = document.getElementById('select-altura');
 let selectRN = document.getElementById('select-rn');
 let btnCalcular = document.getElementById('btncalculo');
-let selectFP = document.getElementById('select-vao');
-let selectFS = document.getElementById('select-FS');
+var selectFP = document.getElementById('select-vao');
+var selectFS = document.getElementById('select-FS');
 let selectVB = document.getElementById('select-cabos-dispo');
 let checkboxCaboTerceiro = document.getElementById('caboterceiro');
 let RES1 = document.getElementById('RES01');
@@ -133,13 +133,13 @@ selectFS.onchange = () => {
 
 //INICIO DA FORMULA DO CALCULO
 
-const E = 42501010000;
-const LF = selectAlturaPoste * 2;
-const MB = selectAlturaPoste * selectRN;
-const VB = ((25 * 25) * 0.00471) * 2.228;
+var E = 42501010000;
+var LF = selectAlturaPoste * 2;
+var MB = selectAlturaPoste * selectRN;
+var VB = ((25 * 25) * 0.00471) * 2.228;
 
-const WA = 0;
-const WB = 0;
+var WA = 0;
+var WB = 0;
 if (selectRN == '200') {
     WA = 223;
 };
@@ -171,10 +171,10 @@ if (WA == 476 && selectAlturaPoste == '12') {
 if (WA == 859 && selectAlturaPoste == '12') {
     WB = 4471
 };
-const LFquad = LF* LF;
-const MA = 0.9 * MB * WA / WB;
-const DELTAWAWB = WB - WA;
-const I = (3.14 * DELTAWAWB) / 64;
+var LFquad = LF* LF;
+var MA = 0.9 * MB * WA / WB;
+var DELTAWAWB = WB - WA;
+var I = (3.14 * DELTAWAWB) / 64;
 
 
 function calcular() {
@@ -207,7 +207,7 @@ function calcular() {
                      <p>${checkboxCaboTerceiro.value}</p>
                   </div>`
     }
-    const Fmax = selectFP.value + selectFS.value + VB;
+    var Fmax = parseFloat(selectFP.value) + parseFloat(selectFS.value) + 90 + VB;
     RES5.innerHTML = 
     `
     <div id="RES05">
