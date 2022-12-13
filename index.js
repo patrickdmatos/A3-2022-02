@@ -28,7 +28,7 @@ let RES2 = document.getElementById('RES02');
 let RES3 = document.getElementById('RES03');
 let RES4 = document.getElementById('RES04');
 let RES5 = document.getElementById('RES05');
-let RES6 = document.getElementById('RES06');
+// let RES6 = document.getElementById('RES06');
 
 /* Desativar o select caso selecioe o 80 ou 120 */
 selectCabo.innerHTML =
