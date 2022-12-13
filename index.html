@@ -87,12 +87,24 @@
                 </div>
 
                 <div id="campo-seletor-fs">
+                    <b>LINHA SECUNDÁRIA
+                        <br>FS / CABOS DISPONÍVEIS
                     
+                        <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                    
+                        </br>
+                
+                        
+                        <select class="input_valor" id="select-FS">
+                            <option value="0">Cabeamento</option>
+                            <option>LINHA SECUNDARIA É APENAS PARA DISTANCIA DE 35M</option>
+                        </select>
+                    </b>
                 </div>
 
-                <div id="campo-seletor">
+                <div id="campo-seletor-terceiro">
                     <b>CABEAMENTO II
-                        <br><input id="" type="checkbox" value="90"> ABRÂNGERÁ CABOS TERCERIZADOS?
+                        <br><input id="caboterceiro" type="checkbox" value="90" checked> ABRÂNGERÁ CABOS TERCERIZADOS?
                     
                         <a href="javascript:lintPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
                     
@@ -107,15 +119,7 @@
                         
                         <br>
 
-                        <select class="input_valor" id="select-cabos-dispo-regiao">
-                            <option selected>Região</option>
-                            <option disabled>Acre</option>
-                            <option disabled>Bahia</option>
-                            <option disabled>Minas Gerais</option>
-                            <option disabled>Rio de Janeiro</option>
-                            <option disabled>Santa Catarina</option>                            
-                            <option value="0.10">São Paulo</option> <!--ALTERAR O VALOR DO VB-->
-                        </select>
+                        <input disabled class="input_valor" id="select-cabos-dispo-regiao" style="color: white;" value="São Paulo">                          
                     </b>
                 </div>
 
@@ -125,12 +129,7 @@
                         <a href="javascript:vblPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
 
                         <br>
-                        <select class="input_valor" id="select-cabos-dispo">
-                            <option selected>Local</option>
-                            <option disabled>Ribeirão Preto</option>
-                            <option disabled>Santana de Parnaiba</option>
-                            <option value="0.10">São Paulo</option>
-                        </select>
+                        <input disabled class="input_valor" id="select-cabos-dispo" style="color: white;" value="São Paulo">
                     </b>
                 </div>
                 <br>
@@ -141,7 +140,9 @@
                 </div>
 
                 <div id="RES02">
+                    <br>
                     <b>FORÇA DE TRAÇÃO NA LINHA SECUNDÁRIA</b>
+                    <p></p>
                 </div>
 
                 <div id="RES03">
@@ -154,6 +155,17 @@
                     <br>
                     <b></b>
                     <p ></p>
+                </div>
+
+                <div id="RES05">
+                    <br>
+                    <b>FORÇA MAXIMA(VS)</b>
+                    <p></p>
+                </div>
+                <div id="RES06">
+                    <br>
+                    <b>FLAMBAGEM</b>
+                    <p></p>
                 </div>
 
             </div>

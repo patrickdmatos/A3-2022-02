@@ -20,12 +20,15 @@ let selectAlturaPoste = document.getElementById('select-altura');
 let selectRN = document.getElementById('select-rn');
 let btnCalcular = document.getElementById('btncalculo');
 let selectFP = document.getElementById('select-vao');
-let selectFS = document.getElementById('campo-seletor-fs');
+let selectFS = document.getElementById('select-FS');
 let selectVB = document.getElementById('select-cabos-dispo');
+let checkboxCaboTerceiro = document.getElementById('caboterceiro');
 let RES1 = document.getElementById('RES01');
 let RES2 = document.getElementById('RES02');
 let RES3 = document.getElementById('RES03');
 let RES4 = document.getElementById('RES04');
+let RES5 = document.getElementById('RES05');
+let RES6 = document.getElementById('RES06');
 
 /* Desativar o select caso selecioe o 80 ou 120 */
 selectCabo.innerHTML =
@@ -50,22 +53,20 @@ selectCabo.onchange = () => {
                                 </select>
         `;
         selectFS.innerHTML =
-            `
-        <b>LINHA SECUNDÁRIA
-        <br>FS / CABOS DISPONÍVEIS
-    
-        <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
-    
-        </br>
+            `<b>LINHA SECUNDÁRIA
+                <br>FS / CABOS DISPONÍVEIS
+            
+                <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px"></a>
+            
+                </br>
 
-        
-        <select class="input_valor" id="campo-seletor-fs">
-            <option>Cabeamento</option>
-            <option value="187">35mm²</option>
-            <option value="373">70mm²</option>
-            <option value="659">185mm²</option>
-        </select>
-    </b>
+                <select class="input_valor" id="campo-seletor-fs">
+                    <option value="0">Cabeamento</option>
+                    <option value="187">35mm²</option>
+                    <option value="373">70mm²</option>
+                    <option value="659">185mm²</option>
+                </select>
+            </b>
         `;
     }
     if (selectCabo.value == '80') {
@@ -125,23 +126,18 @@ selectAlturaPoste.onchange = () => {
     `
     }
 };
-selectVB.onchange = () => {
+selectFP.onchange = () => {
     calcular();
 }
 
 
 //INICIO DA FORMULA DO CALCULO
 
-const E = '42501010000';
+const E = 425.01010000;
 const LF = selectAlturaPoste * 2;
 const MB = selectAlturaPoste * selectRN;
 const VB = ((25 * 25) * 0.00471) * 2.228;
-const Fmax = 0;
-if (selectFS.value !== undefined) {
-    Fmax = selectFP.value + selectFS.value + VB;
-} else {
-    Fmax = selectFP.value + VB;
-}
+
 const WA = 0;
 const WB = 0;
 if (selectRN == '200') {
@@ -175,9 +171,11 @@ if (WA == 476 && selectAlturaPoste == '12') {
 if (WA == 859 && selectAlturaPoste == '12') {
     WB = 4471
 };
+const LFquad = LF* LF;
 const MA = 0.9 * MB * WA / WB;
-const I = (3.14 * (WB - WA)) / 64;
-const FLABAGEM = ((3.14 * E * I) / (LF * LF));
+const DELTAWAWB = WB - WA;
+const I = (3.14 * DELTAWAWB) / 64;
+
 
 function calcular() {
     RES1.innerHTML =
@@ -185,25 +183,46 @@ function calcular() {
                 <br>
                 <b>FORÇA DE TRAÇÃO NA LINHA PRIMÁRIA</b>
                 <p >${selectFP.value}</p>
-         </div>`;
+         </div>`
 
     RES2.innerHTML =
         `<div id="RES02">
-            <b>FORÇA DE TRAÇÃO NA LINHA SECUNDÁRIA</b>
-                <p>${selectFS.value}</p>
-        </div>`;
+                     <br>
+                     <b>FORÇA DE TRAÇÃO NA LINHA SECUNDÁRIA</b>
+                     <p >${selectFS.value}</p>
+              </div>`
 
     RES3.innerHTML =
         `<div id="RES03">
             <br>
             <b>FORÇA DO VENTO NA SUPERFÍCIE DO POSTE</b>
             <p>${VB}</p>
-         </div>`;
+         </div>`
 
-    RES4.innerHTML =
-        `<div id="RES04">
-            <br>
-            <b>FLAMBAGEM:</b>
-            <p>${FLABAGEM}</p>
-        </div>`;
+    if (checkboxCaboTerceiro.checked == true) {
+        RES4.innerHTML =
+            `<div id="RES04">
+                     <br>
+                     <b>FORÇA DE LINHA TELEFONICA</b>
+                     <p>${checkboxCaboTerceiro.value}</p>
+                  </div>`
+    }
+    const Fmax = selectFP.value + selectFS.value + VB;
+    RES5.innerHTML = 
+    `
+    <div id="RES05">
+        <br>
+        <b>FORÇA MAXIMA(VS)</b>
+        <p>${Fmax}</p>
+    </div>
+    `;
+    const FLABAGEM = 3.14 * 425 * I/LFquad;
+    RES6.innerHTML = 
+    `
+    <div id="RES06">
+        <br>
+        <b>FLAMBAGEM</b>
+        <p>${FLABAGEM}</p>
+    </div>
+    `;
 };
