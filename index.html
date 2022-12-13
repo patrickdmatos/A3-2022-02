@@ -30,11 +30,7 @@
                     </br>
                     
                     <select class="input_valor" id="dispost">
-                        <option selected>Distância</option>
-                        <option value="35">35 metros</option>
-                        <option value="40">40 metros</option>
-                        <option value="80">80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
-                        <option value="120">120 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+                        
                     </select>
                 </b>
             </div>
@@ -51,8 +47,23 @@
 
                     <select class="input_valor" id="select-altura">
                         <option selected>Altura</option>
-                        <option value="10">10 metros</option>
+                        <option value="9">9 metros</option>
                         <option value="12">12 metros</option>
+                    </select>
+                </b>
+            </div>
+            
+            <div id="campo-seletor">
+                <b>
+                    <br>Resistência nominal
+                    
+                    <a href="javascript:altpPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+                    
+                    </br>
+
+                    <select class="input_valor" id="select-rn">
+                        <option selected>RN(DaN)</option>
+                        <option >SELECIONE A ALTURA DO POSTE ANTES</option>
                     </select>
                 </b>
             </div>
@@ -71,35 +82,12 @@
 
                         <select class="input_valor" id="select-vao">
                             <option selected>Cabeamento</option>
-                            <option value="0.16">16mm²</option>
-                            <option value="0.25">25mm²</option>
-                            <option value="0.35">35mm²</option>
-                            <option value="0.50">50mm²</option>
-                            <option value="0.70">70mm²</option>
-                            <option value="1.20">120mm² 15kV</option>
                         </select>
                     </b>
                 </div>
 
-                <div id="campo-seletor">
-                    <b>LINHA SECUNDÁRIA
-                        <br>FS / CABOS DISPONÍVEIS
+                <div id="campo-seletor-fs">
                     
-                        <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
-                    
-                        </br>
-
-                        
-                        <select class="input_valor" id="lins">
-                            <option selected disabled>Cabeamento</option>
-                            <option value="0.16">16mm²</option>
-                            <option value="0.25">25mm²</option>
-                            <option value="0.35">35mm²</option>
-                            <option value="0.50">50mm²</option>
-                            <option value="0.70">70mm²</option>
-                            <option value="1.20">120mm² 15kV</option>
-                        </select>
-                    </b>
                 </div>
 
                 <div id="campo-seletor">
@@ -145,8 +133,10 @@
                         </select>
                     </b>
                 </div>
-
+                <br>
+                <button id="btncalculo" class="buttonCalcular">CALCULAR</button>
                 <div>
+                    <br>
                     <b>FORÇA DE TRAÇÃO NA LINHA PRIMÁRIA<div>
                             <p id="RES01"></p>
                         </div></b>
@@ -166,6 +156,7 @@
                 </div>
 
             </div>
+
         </div>
     </section>
     <div id="imgposte"></div>
@@ -173,9 +164,9 @@
         <a href="integrantes.html">&copy;ANCORADOR USJT A3 2022/2</a>
     </footer>
     
-<script src="index.js"></script>
 </body>
 
+<script src="./index.js"></script>
 </html>
 <!--
 ████▀░░░░░░░░░░░░░░░░░▀████

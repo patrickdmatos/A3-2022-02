@@ -79,3 +79,17 @@ footer a {
     color:#93c406
 
 }
+
+.buttonCalcular{
+    font-family:'Roboto mono', Times, serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #93c406;
+    padding: 5px;
+    width: 250px;
+    color: #343d8b;
+    background-color: #fff;
+}

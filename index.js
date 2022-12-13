@@ -1,38 +1,177 @@
 //Msg de info
-function detPopup()
-{alert("Defina qual a distância terão os postes entre sí.");}
+function detPopup() { alert("Defina qual a distância terão os postes entre sí."); }
 
-function altpPopup()
-{alert("Defina qual altura do poste a ser instalado.");}
+function altpPopup() { alert("Defina qual altura do poste a ser instalado."); }
 
-function linpPopup()
-{alert("Esta é a fiação disponível para instalação da linha primária, a qual ficará ostentada no topo do poste.");}
+function linpPopup() { alert("Esta é a fiação disponível para instalação da linha primária, a qual ficará ostentada no topo do poste."); }
 
-function linsPopup()
-{alert("Esta é a fiação disponível para instalação da linha secundária, a qual será fixada na parte intermediária do poste.");}
+function linsPopup() { alert("Esta é a fiação disponível para instalação da linha secundária, a qual será fixada na parte intermediária do poste."); }
 
-function lintPopup()
-{alert("Marque a caixa caso a instalação tenha algum outro tipo de fiação, como cabos de telefone, tv a cabo, etc.");}
+function lintPopup() { alert("Marque a caixa caso a instalação tenha algum outro tipo de fiação, como cabos de telefone, tv a cabo, etc."); }
 
-function vbrPopup()
-{alert("Informe a região de instalação para ter ciência quanto a velocidade base do vento a ser considerada.");}
+function vbrPopup() { alert("Informe a região de instalação para ter ciência quanto a velocidade base do vento a ser considerada."); }
 
-function vblPopup()
-{alert("Informe o local para ter ciência quanto a média variada de vento ocorrida.");}
+function vblPopup() { alert("Informe o local para ter ciência quanto a média variada de vento ocorrida."); }
 
+
+//declarando variaveis do HTML
+let selectCabo = document.getElementById('dispost');
+let selectAlturaPoste = document.getElementById('select-altura');
+let selectRN = document.getElementById('select-rn');
+let btnCalcular = document.getElementById('btncalculo');
+let selectFP = document.getElementById('select-vao');
+let selectFS = document.getElementById('campo-seletor-fs');
 
 
 /* Desativar o select caso selecioe o 80 ou 120 */
+selectCabo.innerHTML = 
+`
+<select class="input_valor" id="dispost">
+    <option selected>Distância</option>
+    <option value="35">35 metros</optiojn>
+    <option value="80">80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+    <option value="120">120 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+</select>
+`
 
-var select = document.getElementById('dispost').value;
+selectCabo.onchange = () => {
+    if (selectCabo.value == '35') {
+        selectFP.innerHTML =
+        `
+                                <select class="input_valor" id="select-vao">
+                                    <option selected>Cabeamento</option>
+                                    <option value="187">35mm²</option>
+                                    <option value="373">70mm²</option>
+                                    <option value="659">185mm²</option>
+                                </select>
+        `;    
+        selectFS.innerHTML =
+        `
+        <b>LINHA SECUNDÁRIA
+        <br>FS / CABOS DISPONÍVEIS
+    
+        <a href="javascript:linsPopup()"><img src="./img/information-source_2139.png" width="13px" /></a>
+    
+        </br>
 
-function disabled() {
-
-    var select = document.getElementById('dispost').value;
-
-
-    if (select == "80 metros"){
-        window.alert("é 80 mesmo");
-        return;
+        
+        <select class="input_valor" id="select-vao">
+            <option selected>Cabeamento</option>
+            <option value="187">35mm²</option>
+            <option value="373">70mm²</option>
+            <option value="659">185mm²</option>
+        </select>
+    </b>
+        `;    
     }
+    if (selectCabo.value == '80') {
+        selectCabo.innerHTML = 
+        `
+        <select class="input_valor" id="dispost">
+            <option >Distância</option>
+            <option value="35">35 metros</optiojn>
+            <option selected value="80">80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+            <option disabled>120 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+        </select>'
+        `;
+        
+        selectFP.innerHTML =
+        `
+                                <select class="input_valor" id="select-vao">
+                                    <option selected>Cabeamento</option>
+                                    <option value="448">35mm²</option>
+                                    <option value="549">70mm²</option>
+                                    <option value="837">185mm²</option>
+                                </select>
+        `;                
+    }
+    if (selectCabo.value == '120') {
+        selectCabo.innerHTML = 
+        `
+        <select class="input_valor" id="dispost">
+            <option >Distância</option>
+            <option value="35">35 metros</optiojn>
+            <option disabled>80 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+            <option selected value="120">120 metros</option> <!--TRABALHA SOMENTE COM FORÇA PRIMÁRIA-->
+        </select>'
+        `        
+    }
+};
+selectAlturaPoste.onchange = () => {
+if (selectAlturaPoste.value == '9') {
+    selectRN.innerHTML = 
+    `
+    <select class="input_valor" id="select-rn">
+        <option selected>RN(DaN)</option>
+        <option value="200">200</option>
+        <option value="400">400</option>
+        <option value="600">600</option>
+    </select>
+    `
 }
+if (selectAlturaPoste.value == '12') {
+    selectRN.innerHTML = 
+    `
+    <select class="input_valor" id="select-rn">
+        <option selected>RN(DaN)</option>
+        <option value="400">400</option>
+        <option value="600">600</option>
+        <option value="1000">1000</option>
+    </select>
+    `
+}
+};
+
+
+//INICIO DA FORMULA DO CALCULO
+
+const E = '42501010000';
+const LF = selectAlturaPoste * 2;
+const MB = selectAlturaPoste * selectRN;
+const VB = 6.558675;
+const Fmax = 0;
+if (selectFS.value) {
+    Fmax = selectFP.value + selectFS.value + VB;    
+}else{
+    Fmax = selectFP.value + VB;
+}
+const WA = 0;
+const WB = 0;
+if (selectRN == '200') {
+    WA = 223;
+};
+if (selectRN == '400') {
+    WA = 337;
+};
+if (selectRN == '600') {
+    WA = 476;
+};
+if (selectRN == '1000') {
+    WA = 859;
+};
+
+if(WA == 223 && selectAlturaPoste == '9'){
+    WB = 1583	
+};
+if(WA == 337 && selectAlturaPoste == '9'){
+    WB = 1977	
+};
+if(WA == 476 && selectAlturaPoste == '9'){
+    WB = 2308	
+};
+if(WA == 337 && selectAlturaPoste == '12'){
+    WB = 2929	
+};
+if(WA == 476 && selectAlturaPoste == '12'){
+    WB = 3329	
+};
+if(WA == 859 && selectAlturaPoste == '12'){
+    WB = 4471	
+};
+const MA = 0.9 * MB * WA/WB;
+const I = (3.14*(WB - WA))/64;
+const FLABAGEM = (3.14 * E * I)/(LF*LF);
+
+btnCalcular.onclick = () => {
+    
+};
