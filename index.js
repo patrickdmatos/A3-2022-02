@@ -126,14 +126,14 @@ selectAlturaPoste.onchange = () => {
     `
     }
 };
-selectFP.onchange = () => {
+selectFS.onchange = () => {
     calcular();
-}
+};
 
 
 //INICIO DA FORMULA DO CALCULO
 
-const E = 425.01010000;
+const E = 42501010000;
 const LF = selectAlturaPoste * 2;
 const MB = selectAlturaPoste * selectRN;
 const VB = ((25 * 25) * 0.00471) * 2.228;
@@ -216,13 +216,13 @@ function calcular() {
         <p>${Fmax}</p>
     </div>
     `;
-    const FLABAGEM = 3.14 * 425 * I/LFquad;
-    RES6.innerHTML = 
-    `
-    <div id="RES06">
-        <br>
-        <b>FLAMBAGEM</b>
-        <p>${FLABAGEM}</p>
-    </div>
-    `;
+    // const FLABAGEM = 3.14 * 425 * I/LFquad;
+    // RES6.innerHTML = 
+    // `
+    // <div id="RES06">
+    //     <br>
+    //     <b>FLAMBAGEM</b>
+    //     <p>${FLABAGEM}</p>
+    // </div>
+    // `;
 };
